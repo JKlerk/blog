@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
-<body class="m-8 bg-grey-lighter font-sans antialiased">
-<div class="flex flex-wrap" style="flex: 1 0 auto;">
+<body class="bg-grey-lighter">
+<div class="m-8 mt-4 bg-grey-lighter font-sans antialiased flex flex-wrap" style="flex: 1 0 auto;">
     @if ($articles->isEmpty())
         <div class="w-1/4 p-6 bg-white rounded shadow">
             <p class="text-lg font-semibold text-black">There are no articles</p>
@@ -48,10 +51,11 @@
 @if ($articles->isEmpty()) 
 @else
     <a href="{{ url('articles/create') }}">
-        <button class="w-full bg-green hover:bg-green-dark mt-4 font-semibold rounded shadow text-white py-2" type="button">
+        <button class="w-full bg-green hover:bg-green-dark font-semibold rounded shadow text-white py-2" type="button">
             Create new article
         </button>
     </a>
 @endif
 </body>
 </html>
+@endsection

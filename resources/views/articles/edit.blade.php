@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
-<body class="m-8 bg-grey-lighter font-sans antialiased">
-    <div class="mx-auto w-1/3 container">
+<body class="bg-grey-lighter">
+    <div class="m-8 font-sans antialiased mx-auto w-1/3 container">
     <h1 class="text-center text-base font-semibold text-blue-darkest my-4 pb-4 border-b">Edit article: {{ $article->title }}</h1>
        <div class="flex">
             <a class="w-full" href=" {{ url('articles') }}">
@@ -45,3 +49,4 @@
     </div>
 </body>
 </html>
+@endsection
